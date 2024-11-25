@@ -2,7 +2,7 @@ import pandas as pd
 
 # Universo de productos variados
 productos = pd.DataFrame({
-    "id": range(1, 21),  # 20 productos
+    "id": range(1, 21),
     "nombre": [
         "Café en grano 1kg", "Azúcar 5kg", "Leche en polvo 1kg", "Shampoo 500ml",
         "Aceite para masaje 250ml", "Whisky 12 años 750ml", "Cerveza artesanal 500ml",
@@ -21,5 +21,9 @@ productos = pd.DataFrame({
     "unidad_textual": [
         "kg", "kg", "kg", "ml", "ml", "ml", "ml", "ml", "kg", "u",
         "u", "u", "kg", "kg", "kg", "ml", "u", "u", "L", "ml"
-    ]
+    ],
+    "rubro_id": [
+        1, 2, 2, 4, 7, 10, 10, 10, 2, 4, 
+        4, 4, 2, 2, 2, 7, 5, 5, 8, 10
+    ]  # Relación de producto con el rubro
 })

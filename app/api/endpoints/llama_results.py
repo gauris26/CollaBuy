@@ -31,9 +31,9 @@ async def generate_recommendations(num_pedidos: int = 100):
         validated_response = procesar_respuesta_json(raw_response)
         
         if validated_response:
-            return validated_response.dict()
+            return validated_response.model_dump()
         else:
-            raise HTTPException(status_code=400, detail="Invalid JSON response from OpenAI.")
+            raise Exception("Invalid JSON response from OpenAI.")
     
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise Exception("Invalid JSON response from OpenAI.")

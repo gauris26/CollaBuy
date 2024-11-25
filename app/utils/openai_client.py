@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
-from app.utils.constants import SYSTEM_PROMPT
+from utils.constants import SYSTEM_PROMPT
 
 def generate_json(prompt: str) -> str:
     load_dotenv()
